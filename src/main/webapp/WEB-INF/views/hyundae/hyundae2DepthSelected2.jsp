@@ -146,7 +146,7 @@
           <div class="depth-1">
             <a href="/diagonosis/hyundae1DepthList" class="depth-1-item on onThisToggle">현대모터</a>
             <div class="depth-2">
-              <a href="/diagonosis/hyundae2DepthList?item_sn=0" class="depth-2-item on onThisToggle">5.5kW(7.5Hp)</a>
+              <a href="/diagonosis/hyundae2DepthList?item_sn=${minNum}" class="depth-2-item on onThisToggle">5.5kW(7.5Hp)</a>
             </div>
           </div>
         </div>

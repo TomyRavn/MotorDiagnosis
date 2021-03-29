@@ -118,5 +118,10 @@
 		WHERE
 			item_sn = #{item_sn}
 	</select>
+	
+	<select id="selectMinItem" resultType="Integer">
+		SELECT MIN(item_sn)
+		FROM test_model
+	</select>
 
 </mapper>

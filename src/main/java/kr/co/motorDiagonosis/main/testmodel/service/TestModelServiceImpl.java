@@ -50,6 +50,11 @@ public class TestModelServiceImpl implements TestModelService{
 	}
 
 	@Override
+	public int selectMinItem() {
+		return testModelDao.selectMinItem();
+	}
+	
+	@Override
 	public int selectInstFlag(TestModelVO vo) {
 		return testModelDao.selectInstFlag(vo);
 	}

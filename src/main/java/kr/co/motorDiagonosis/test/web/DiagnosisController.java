@@ -10,14 +10,19 @@ import kr.co.motorDiagonosis.main.testmodel.vo.TestModelVO;
 
 @Controller
 @RequestMapping("/diagonosis")
-public class diagonosisController {
+public class DiagnosisController {
 	
 	@Autowired
 	private TestModelService testModelService;
 	
+	int minNum = 0;
+	
 	/** 현대 */
 	@RequestMapping("/hyundae1DepthList")
-	public String hyundae1DepthList() {
+	public String hyundae1DepthList(ModelMap model) {
+		
+		minNum = testModelService.selectMinItem();
+		model.addAttribute("minNum", minNum);
 		
 		return "hyundae/hyundae1DepthList";
 		
@@ -29,6 +34,10 @@ public class diagonosisController {
 	public String hyundae2DepthList(ModelMap model, int item_sn) {
 		
 		model.addAttribute("item_sn",item_sn);
+		
+		minNum = testModelService.selectMinItem();
+		model.addAttribute("minNum", minNum);
+		
 		TestModelVO vo = new TestModelVO();
 		vo.setItem_sn(item_sn);
 		
@@ -55,7 +64,7 @@ public class diagonosisController {
 	}
 	
 	@RequestMapping("/hyundae2DepthSelected2")
-	public String hyundae2DepthSelected2() {
+	public String hyundae2DepthSelected2(ModelMap model) {
 		
 		return "hyundae/hyundae2DepthSelected2";
 		

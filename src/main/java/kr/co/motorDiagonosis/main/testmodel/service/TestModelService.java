@@ -13,6 +13,7 @@ public interface TestModelService {
 	int updateModel(TestModelVO vo);
 	int deleteModel(TestModelVO vo);
 	int selectInstFlag(TestModelVO vo);
+	int selectMinItem();
 	List<TestModelVO> selectModelListAll(TestModelVO vo);
 	
 }

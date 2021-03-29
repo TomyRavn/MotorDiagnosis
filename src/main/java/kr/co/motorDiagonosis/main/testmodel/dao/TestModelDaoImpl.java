@@ -46,8 +46,13 @@ public class TestModelDaoImpl implements TestModelDao{
 	}
 
 	@Override
+	public int selectMinItem() {
+		return sql.selectOne("testmodel.selectMinItem");
+	}
+	
+	@Override
 	public int selectInstFlag(TestModelVO vo) {
 		return sql.selectOne("testmodel.selectInstFlag", vo);
 	}
-	
+
 }

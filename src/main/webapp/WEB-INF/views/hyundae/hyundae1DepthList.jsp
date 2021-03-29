@@ -136,7 +136,7 @@
           <div class="depth-1">
             <a href="/diagonosis/hyundae1DepthList" class="depth-1-item on onThisToggle">현대모터</a>
             <div class="depth-2">
-              <a href="/diagonosis/hyundae2DepthList?item_sn=0" class="depth-2-item onThisToggle">5.5kW(7.5Hp)</a>
+              <a href="/diagonosis/hyundae2DepthList?item_sn=${minNum}" class="depth-2-item onThisToggle">5.5kW(7.5Hp)</a>
             </div>
           </div>
         </div>
@@ -203,59 +203,8 @@
               </div>
             </div>
             
-         <div class="scroll-box" id="cardList">
-
-            <div class="card">
-               <div class="card-name"><a href="#">현대모터(5.5kW(7.5Hp))</a></div>
-               <div class="card-date">2020-12-20 16:57:20</div>
-               <div class="flex between">
-               	<div class="card-text">분석이 완료되지 않았습니다.</div>
-                 <button class="btn btn-26 lg btn-danger">
-                   <div class="btn-icon">
-                     <img src="/resources/static/img/delete.svg" alt="">
-                   </div>
-                   	삭제
-                 </button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-name"><a href="/diagonosis/hyundae2DepthSelected2">현대모터(5.5kW(7.5Hp))</a></div>
-                <div class="card-date">2020-12-19 16:42:36</div>
-                <div class="flex between">
-                  <div class="btn-group">
-                    <button class="btn btn-26 btn-primary">DNN</button>
-                    <button class="btn btn-26 btn-primary">RF</button>
-                    <button class="btn btn-26 btn-primary">SVM</button>
-                    <button class="btn btn-26 btn-primary">Ensemble</button>
-                  </div>
-                  <button class="btn btn-26 lg btn-danger">
-                    <div class="btn-icon">
-                      <img src="/resources/static/img/delete.svg" alt="">
-                    </div>
-                    삭제
-                  </button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-name"><a href="/diagonosis/hyundae2DepthSelected">현대모터(5.5kW(7.5Hp))</a></div>
-                <div class="card-date">2020-12-14 17:34:33</div>
-                <div class="flex between">
-                  <div class="btn-group">
-                    <button class="btn btn-26 btn-primary">DNN</button>
-                    <button class="btn btn-26 btn-primary">RF</button>
-                    <button class="btn btn-26 btn-primary">SVM</button>
-                    <button class="btn btn-26 btn-primary">Ensemble</button>
-                  </div>
-                  <button class="btn btn-26 lg btn-danger">
-                    <div class="btn-icon">
-                      <img src="/resources/static/img/delete.svg" alt="">
-                    </div>
-                    삭제
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="scroll-box" id="cardList"></div>
+         </div>
         </div>
         <div class="container sm">
           <div class="bar-title mb-20">
