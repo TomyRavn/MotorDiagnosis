@@ -1,0 +1,24 @@
+//flex 
+@mixin flex($align-items: null, $justify-content: null, $flex-direction: null, $flex-wrap: null) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+	flex-direction: $flex-direction;
+	flex-wrap: $flex-wrap;
+	@content;
+}
+
+
+// color mix 'dark' OR 'light'
+$theme-color-interval: 10%;
+
+@function color-level($color: $primary, $level: 0) {
+  $color-base: abs($level);
+
+  @if($level > 0) {
+    @return lighten($color, $color-base * $theme-color-interval);
+	} @else { 
+    @return darken($color, $color-base * $theme-color-interval);
+	}
+
+}

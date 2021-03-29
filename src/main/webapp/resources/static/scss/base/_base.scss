@@ -1,0 +1,32 @@
+
+html,body {
+  font-family: $font-family-base;
+  min-height: 100%;
+  height: 100%;
+}
+.wrap {
+  font-family: $font-family-base;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+input, textarea,select,option,button {
+  box-sizing: border-box;
+  font-family: $font-family-base;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+button {
+  line-height: 1;
+  background: none;
+} 
+th,td {
+  word-break: keep-all;
+}

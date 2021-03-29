@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="testmodel">
+
+	<resultMap type="TestModelVO" id="testModelMap">
+		<result column="item_sn" property="item_sn"/>
+		<result column="org_nm" property="org_nm"/>
+		<result column="model_nm" property="model_nm"/>
+		<result column="model_dttm" property="model_dttm"/>
+		<result column="type_nm" property="type_nm"/>
+		<result column="result_nm" property="result_nm"/>
+		<result column="inst_flag" property="inst_flag"/>
+		<result column="err_flag" property="err_flag"/>
+	</resultMap>
+	
+	<select id="selectModelList" parameterType="TestModelVO" resultMap="testModelMap">
+		SELECT
+			item_sn
+			, org_nm
+			, model_nm
+			, DATE_FORMAT(model_dttm,'%Y-%m-%d %H:%i:%s') AS model_dttm
+			, type_nm
+			, result_nm
+			, inst_flag
+			, err_flag
+		FROM 
+			test_model
+		ORDER BY
+			item_sn DESC
+		LIMIT	#{startPage}, #{perPage}
+	</select>
+	
+	<select id="selectModelListTotal" parameterType="TestModelVO" resultType="int">
+		SELECT COUNT(*) FROM test_model
+	</select>
+	
+	<select id="selectModelListTotalRes" parameterType="TestModelVO" resultType="int">
+		SELECT COUNT(*) FROM test_model WHERE result_nm=#{result_nm}
+	</select>
+	
+	<insert id="insertModel" parameterType="TestModelVO" >
+	INSERT INTO test_model (
+         org_nm
+         , model_nm
+         
+         , type_nm
+         , result_nm
+         , inst_flag
+         , err_flag
+      ) VALUES (
+         #{org_nm}
+         , #{model_nm}
+         
+         , #{type_nm}
+         , #{result_nm}
+         , #{inst_flag}
+         , 1
+      )
+	</insert>
+	
+	<select id="selectModelListAll" parameterType="TestModelVO" resultMap="testModelMap">
+		SELECT
+			item_sn
+			, org_nm
+			, model_nm
+			, DATE_FORMAT(model_dttm,'%Y-%m-%d %H:%i:%s') AS model_dttm
+			, type_nm
+			, result_nm
+			, inst_flag
+			, err_flag
+		FROM 
+			test_model
+		WHERE
+			1=1
+			<if test="err_flag neq -1">
+				AND err_flag = #{err_flag}
+			</if>
+			<if test="result_nm neq '-1'.toString()">
+				AND result_nm = #{result_nm}
+			</if>
+			<if test="stdt != '' and stdt != null">
+				AND model_dttm &gt; STR_TO_DATE(#{stdt}, '%Y-%m-%d')
+			</if>
+			<if test="eddt != '' and eddt != null">
+				AND model_dttm &lt; DATE_ADD(STR_TO_DATE(#{eddt}, '%Y-%m-%d'), INTERVAL 1 DAY)
+			</if>
+			
+		ORDER BY
+			item_sn DESC
+	</select>
+	
+	<update id="updateModel" parameterType="TestModelVO">
+		UPDATE
+			test_model
+		SET
+			model_dttm=NOW(),
+			inst_flag=0,
+			err_flag=1,
+			result_nm='비정상'
+		WHERE
+			item_sn = #{item_sn}
+	</update>
+	
+	<delete id="deleteModel" parameterType="TestModelVO">
+		DELETE
+		FROM
+			test_model
+		WHERE
+			item_sn = #{item_sn}
+	</delete>
+	
+	<select id="selectInstFlag" parameterType="TestModelVO" resultType="Integer">
+		SELECT
+			inst_flag
+		FROM
+			test_model
+		WHERE
+			item_sn = #{item_sn}
+	</select>
+
+</mapper>

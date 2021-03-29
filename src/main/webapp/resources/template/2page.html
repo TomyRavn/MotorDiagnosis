@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A soft</title>
+  <link rel="stylesheet" href="/static/css/datepicker.min.css">
+  <link rel="stylesheet" href="/static/css/index.css">
+  <script src="/static/js/includeHTML.js"></script>
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/datepicker.min.js"></script>
+  <script src="/static/js/datepicker.en.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1><a href="#this"><img src="/static/img/logo.svg" alt=""></a></h1>
+      <nav>
+        <div class="gnb">
+          <a href="#this" class="gnb-item onThisToggle">
+            <span class="gnb-icon" include-HTML="/static/img/dashboard.svg"></span>
+            Dashboard
+          </a>
+        </div>
+        <div class="gnb">
+          <a href="#this" class="gnb-item arrow on onThisToggle">
+            <span class="gnb-icon" include-HTML="/static/img/gnb-01.svg"></span>
+            전동기 결함 유형 진단
+          </a>
+          <div class="depth-1">
+            <a href="#this" class="depth-1-item on onThisToggle">현대모터</a>
+            <div class="depth-2">
+              <a href="#this" class="depth-2-item onThisToggle">55kW(7.5Hp)</a>
+              <a href="#this" class="depth-2-item onThisToggle">7.5kW</a>
+              <a href="#this" class="depth-2-item onThisToggle">Motor-ll</a>
+            </div>
+          </div>
+          <div class="depth-1">
+            <a href="#this" class="depth-1-item onThisToggle">두산모터</a>
+            <div class="depth-2">
+              <a href="#this" class="depth-2-item onThisToggle">55kW(7.5Hp)</a>
+              <a href="#this" class="depth-2-item onThisToggle">7.5kW</a>
+              <a href="#this" class="depth-2-item onThisToggle">Motor-ll</a>
+            </div>
+          </div>
+          <div class="depth-1">
+            <a href="#this" class="depth-1-item onThisToggle">기아모터</a>
+            <div class="depth-2">
+              <a href="#this" class="depth-2-item onThisToggle">55kW(7.5Hp)</a>
+              <a href="#this" class="depth-2-item onThisToggle">7.5kW</a>
+              <a href="#this" class="depth-2-item onThisToggle">Motor-ll</a>
+            </div>
+          </div>
+        </div>
+        <div class="gnb">
+          <a href="#this" class="gnb-item arrow onThisToggle">
+          <span class="gnb-icon" include-HTML="/static/img/gnb-02.svg"></span>
+          ECO 시스템 환경관리
+          </a>
+        </div>
+      </nav>
+      <div class="bottom-logo"><img src="/static/img/logo.svg" alt=""></div>
+    </header>
+    <main>
+      <div class="page-title mb-40">
+        현대모터
+        <div class="sub">전동기 결함 유형 진단</div>
+      </div>
+      <div class="flex">
+        <div class="container xs mr-20">
+          <div class="bar-title mb-20">분석데이터</div>
+          <div class="border-content mb-20">
+            <div class="flex mb-20">
+              <div class="custom-select mr-20">
+                <div class="name">결합유형</div>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">전체1</option>
+                  <option value="">전체2</option>
+                </select>
+              </div>
+              <div class="custom-select">
+                <div class="name">상태</div>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">전체1</option>
+                  <option value="">전체2</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex align-center">
+              <input type="text" placeholder="년도-월-일" 
+              class="datepicker-input datepicker-here" 
+              data-language="en"
+              data-date-format="yyyy-mm-dd">
+              <span class="my-10">~</span>
+              <input type="text" placeholder="년도-월-일" 
+              class="datepicker-input datepicker-here" 
+              data-language="en"
+              data-date-format="yyyy-mm-dd">
+              <button class="btn btn-darkblue btn-40 ml-20">검색</button>
+            </div>
+          </div>
+          <div class="data-content">
+            <div class="top-info">
+              <div class="info-data">
+                <div class="dot success"></div>
+                <div class="name">비정상</div>
+              </div>
+              <div class="info-data">
+                <div class="dot"></div>
+                <div class="name">정상</div>
+              </div>
+            </div>
+            <div class="scroll-box">
+              <div class="card on">
+                <div class="card-name">현대모터(5.5kW(7.5Hp))</div>
+                <div class="card-date">2020-11-30 14:17:10</div>
+                <div class="flex between">
+                  <div class="btn-group">
+                    <button class="btn btn-26 btn-success">DNN</button>
+                    <button class="btn btn-26 btn-success">RF</button>
+                    <button class="btn btn-26 btn-success">SVM</button>
+                    <button class="btn btn-26 btn-primary">Ensemble</button>
+                  </div>
+                  <button class="btn btn-26 lg btn-danger">
+                    <div class="btn-icon">
+                      <img src="/static/img/delete.svg" alt="">
+                    </div>
+                    삭제
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-name">현대모터(5.5kW(7.5Hp))</div>
+                <div class="card-date">2020-11-30 14:17:10</div>
+                <div class="flex between">
+                  <div class="btn-group">
+                    <button class="btn btn-26 btn-success">DNN</button>
+                    <button class="btn btn-26 btn-success">RF</button>
+                    <button class="btn btn-26 btn-success">SVM</button>
+                    <button class="btn btn-26 btn-primary">Ensemble</button>
+                  </div>
+                  <button class="btn btn-26 lg btn-danger">
+                    <div class="btn-icon">
+                      <img src="/static/img/delete.svg" alt="">
+                    </div>
+                    삭제
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-name">현대모터(5.5kW(7.5Hp))</div>
+                <div class="card-date">2020-11-30 14:17:10</div>
+                <div class="flex between">
+                  <div class="card-text">분석이 완료되지 않았습니다.</div>
+                  <button class="btn btn-26 lg btn-danger">
+                    <div class="btn-icon">
+                      <img src="/static/img/delete.svg" alt="">
+                    </div>
+                    삭제
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-name">현대모터(5.5kW(7.5Hp))</div>
+                <div class="card-date">2020-11-30 14:17:10</div>
+                <div class="flex between">
+                  <div class="btn-group">
+                    <button class="btn btn-26 btn-success">DNN</button>
+                    <button class="btn btn-26 btn-primary">RF</button>
+                    <button class="btn btn-26 btn-success">SVM</button>
+                    <button class="btn btn-26 btn-primary">Ensemble</button>
+                  </div>
+                  <button class="btn btn-26 lg btn-danger">
+                    <div class="btn-icon">
+                      <img src="/static/img/delete.svg" alt="">
+                    </div>
+                    삭제
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-name">현대모터(5.5kW(7.5Hp))</div>
+                <div class="card-date">2020-11-30 14:17:10</div>
+                <div class="flex between">
+                  <div class="btn-group">
+                    <button class="btn btn-26 btn-success">DNN</button>
+                    <button class="btn btn-26 btn-primary">RF</button>
+                    <button class="btn btn-26 btn-success">SVM</button>
+                    <button class="btn btn-26 btn-primary">Ensemble</button>
+                  </div>
+                  <button class="btn btn-26 lg btn-danger">
+                    <div class="btn-icon">
+                      <img src="/static/img/delete.svg" alt="">
+                    </div>
+                    삭제
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container sm">
+          <div class="bar-title mb-20">
+            분석결과
+            <div class="sub">현대모터(5.5kW(7.5Hp))</div>
+          </div>
+          <div class="graph-scroll-content">
+            <div class="graph-grid-content">
+              <div class="graph-item border-content">
+                <div class="graph-title">RawData(A)</div>
+                <div class="graph-box ready"></div>
+              </div>
+              <div class="graph-item border-content">
+                <div class="graph-title">RawData(V)</div>
+                <div class="graph-box ready"></div>
+              </div>
+              <div class="graph-item border-content">
+                <div class="graph-title">FFT(30Hz A)</div>
+                <div class="graph-box ready"></div>
+              </div>
+              <div class="graph-item border-content">
+                <div class="graph-title">FFT(30Hz V)</div>
+                <div class="graph-box ready"></div>
+              </div>
+              <div class="graph-item border-content">
+                <div class="graph-title">FFT(60Hz A)</div>
+                <div class="graph-box ready"></div>
+              </div>
+            </div>
+            <div class="board-grid ">
+              <div class="board-grid-content">
+                <div class="board-title">Deep Learning</div>
+                <div class="board-column">
+                  <div class="board-item">
+                    <div class="board-name success">DNN</div>
+                    <div class="board-text">
+                      <p>회정자바 결함 여부 0.005</p> 
+                      <p>부하불평형 결함 여부 0.992</p>
+                      <p>편심 결함 여부 0.989</p>
+                    </div>
+                  </div>
+                  <div class="board-item">
+                    <div class="board-name">Ensemble</div>
+                    <div class="board-text">
+                      정상
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="board-grid-content">
+                <div class="board-title">Machine Learning</div>
+                <div class="board-row">
+                  <div class="board-item">
+                    <div class="board-name success">RF</div>
+                    <div class="board-text">
+                      <p>회정자바 결함 여부 0</p> 
+                      <p>부하불평형 결함 여부 1</p>
+                      <p>편심 결함 여부 1</p>
+                    </div>
+                  </div>
+                  <div class="board-item">
+                    <div class="board-name success">SVM</div>
+                    <div class="board-text">
+                      편심 + 부하불평형 + 회전자바결함
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    includeHTML();
+  </script>
+  <script src="/static/js/onThisToggle.js"></script>
+  <script>
+    $('.datepicker-here').datepicker({
+    });
+  </script>
+</body>
+</html>

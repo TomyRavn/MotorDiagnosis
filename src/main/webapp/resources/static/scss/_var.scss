@@ -1,0 +1,45 @@
+
+@font-face {
+  font-family: 'Notosans';
+  src: url('/static/font/NotoSansKR-Light.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Notosans';
+  src: url('/static/font/NotoSansKR-Regular.otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Notosans';
+  src: url('/static/font/NotoSansKR-Medium.otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Notosans';
+  src: url('/static/font/NotoSansKR-Bold.otf');
+  font-weight: 700;
+}
+
+
+$white: #fff;
+$black: #000;
+$green: #21caab;
+$blue: #3386ff;
+$sky: #02adff;
+$red: #d9534f;
+
+$darkblue: #0073aa;
+$dark: #0c355b;
+$gray-blue: #466887;
+
+$bg-blue: #f3f9fb;
+$border-color: #ebebeb;
+
+$font-family-base:  'Notosans', sans-serif !default;
+
+// 기본 폰트 웨이트 설정
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-bold:            700 !default;
+$font-weight-black:           900 !default;
